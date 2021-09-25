@@ -3,15 +3,20 @@ let apellido = prompt("Ingresar Apellido");
 let edad = prompt("Ingresar Edad");
 let contraseña = "TrazoDulce"
 let pass = prompt("Ingresar contraseña")
+let intentos = 5
 console.log(nombre);
 console.log(apellido);
-console.log(edad)
-if(edad >= 18 && pass == contraseña){
-    alert("Bienvenido/a");
-} else if (edad <= 18 && pass != contraseña){
-    alert("No se han podido validar los datos")
-} else if (edad < 18){
-    alert("Sos menor de edad, no puede ingresar")
-} else if (pass != contraseña){
-    alert("Error al ingresar la contraseña")
-} 
+while (pass != contraseña && intentos > 0){
+    alert(`Contraseña incorrecta. Te quedan ${intentos} intentos`);
+    intentos --
+    pass = prompt("Ingresar contraseña")
+
+    let validar = confirm("¿Desea cambiar la contraseña?")
+
+    if (validar) {
+        let passOld = prompt("Ingresar contraseña vieja")
+        if (passOld == contraseña){
+            contraseña = prompt("Ingresar nueva contraseña")
+        }
+    }
+}
