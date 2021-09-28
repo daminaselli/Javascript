@@ -1,3 +1,4 @@
+/*
 let nombre = prompt("Ingresar Nombre");
 let apellido = prompt("Ingresar Apellido");
 let edad = prompt("Ingresar Edad");
@@ -20,3 +21,11 @@ while (pass != contraseña && intentos > 0){
         }
     }
 }
+*/
+const suma = (a,b) => a + b;
+const resta = (a,b) => a - b;
+const iva = x => x * 0.21;
+let precioProducto = Number(prompt (`Ingresar Precio`)); 
+let precioDescuento = Number(prompt (`Ingresar Descuento`));  
+let nuevoPrecio = resta(suma(precioProducto, iva(precioProducto)), precioDescuento); 
+alert (nuevoPrecio);
