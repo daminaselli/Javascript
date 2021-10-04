@@ -1,41 +1,9 @@
-/*
-let nombre = prompt("Ingresar Nombre");
-let apellido = prompt("Ingresar Apellido");
-let edad = prompt("Ingresar Edad");
-let contraseña = "TrazoDulce"
-let pass = prompt("Ingresar contraseña")
-let intentos = 5
-console.log(nombre);
-console.log(apellido);
-while (pass != contraseña && intentos > 0){
-    alert(`Contraseña incorrecta. Te quedan ${intentos} intentos`);
-    intentos --
-    pass = prompt("Ingresar contraseña")
-
-    let validar = confirm("¿Desea cambiar la contraseña?")
-
-    if (validar) {
-        let passOld = prompt("Ingresar contraseña vieja")
-        if (passOld == contraseña){
-            contraseña = prompt("Ingresar nueva contraseña")
-        }
-    }
-}
-const suma = (a,b) => a + b;
-const resta = (a,b) => a - b;
-const iva = x => x * 0.21;
-let precioProducto = Number(prompt (`Ingresar Precio`)); 
-let precioDescuento = Number(prompt (`Ingresar Descuento`));  
-let nuevoPrecio = resta(suma(precioProducto, iva(precioProducto)), precioDescuento); 
-alert (nuevoPrecio);
-*/
-
 class Productos {
-    constructor(nombreP, precioP, stockP) {
+    constructor(nombreP, precioP, stockP, disponibleP) {
         this.nombre  = nombreP;
         this.precio  = precioP;
         this.stock = stockP;
-        this.disponible = true;
+        this.disponible = disponibleP;
     }
     comprar(cantidad) {
         if (this.stock <= 0) {
@@ -49,4 +17,22 @@ class Productos {
 }
 const producto1 = new Productos("Tarta Frutilla", "$1200" , 20 , true);
 const producto2 = new Productos("Cheesecake", "1500", 20, true);
+
+/*
+let listaProductos[]
+
+listaProductos.push(new Productos("Tarta Frutilla", "$1200" , 20 , true))
+listaProductos.push(new Productos("Cheesecake Frutilla", "$1500" , 20 , true))
+listaProductos.push(new Productos("Dripcake", "$2000" , 20 , true))
+listaProductos.push(new Productos("Number Cake", "$1800" , 20 , true))
+listaProductos.push(new Productos("Lemon Pie", "$1200" , 20 , true))
+listaProductos.push(new Productos("Tarta Oreo", "$1300" , 20 , true))
+listaProductos.push(new Productos("Tarta Frutilla", "$1200" , 20 , true))
+
+let search = prompt("¿Qué querés comprar");
+let buscadorMultiple = listaProductos.filter(obj => obj.nombre === search)
+alert(buscadorMultiple);
+*/
+
+
 
