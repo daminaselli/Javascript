@@ -25,6 +25,11 @@ const producto7 = new Productos("Selva Negra", 1200 , 20 , true);
 
 console.log(producto1.comprar);
 console.log(producto2.comprar);
+console.log(producto3.comprar);
+console.log(producto4.comprar);
+console.log(producto5.comprar);
+console.log(producto6.comprar);
+console.log(producto7.comprar);
 
 const listaProductos = [];
 
