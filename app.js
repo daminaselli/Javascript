@@ -16,7 +16,13 @@ class Productos {
     }
 }
 const producto1 = new Productos("Tarta Frutilla", 1200, 20, true);
-const producto2 = new Productos("Lemon Pie", 1200, 20, true);
+const producto2 = new Productos("Cheesecake Frutilla", 1500 , 20 , true);
+const producto3 = new Productos("Dripcake", 2000 , 20 , true);
+const producto4 = new Productos("Number Cake", 1800 , 20 , true);
+const producto5 = new Productos("Lemon Pie", 1200, 20, true);
+const producto6 = new Productos("Tarta Oreo", 1300 , 20 , true);
+const producto7 = new Productos("Selva Negra", 1200 , 20 , true);
+
 console.log(producto1.comprar);
 console.log(producto2.comprar);
 
