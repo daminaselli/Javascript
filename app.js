@@ -1,4 +1,4 @@
-class Productos {
+/*class Productos {
     constructor(nombre, precio, stock, disponible) {
         this.nombre = nombre;
         this.precio = precio;
@@ -53,7 +53,35 @@ listaProductos.sort((a,b) => {
 
 const search = prompt("¿Qué querés comprar");
 const buscadorMultiple = listaProductos.filter(obj => obj.nombre === search)
-console.log(buscadorMultiple);
+console.log(buscadorMultiple);*/
+
+const h3 = document.createElement ("h3")
+h3.setAttribute("id","titulo")
+h3.textContent = "¿Cuál producto querés?. Rellena el formulario"
+document.getElementById("formulario").appendChild(h3)
+
+class productos {
+    constructor ({nombre,email,producto}) {
+        this.nombre = nombre;
+        this.email = email;
+        this.producto = producto;
+    }
+}
+
+const guardarDatos = () => {
+
+    const product = new productos(
+        {
+        nombre : document.getElementById("nombre").value,
+        email : document.getElementById("email").value,
+        producto : document.getElementById("producto").value
+    }
+    )
+    return product
+}
+document.getElementById("btn").addEventListener("click", () => {
+    guardarDatos()
+})
 
 
 
