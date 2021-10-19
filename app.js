@@ -82,7 +82,20 @@ const guardarDatos = () => {
 document.getElementById("btn").addEventListener("click", () => {
     guardarDatos()
 })
-
+const boton = document.getElementById("btn")
+boton.addEventListener("click", (e) => {
+    e.preventDefault()
+    validadoda()
+    if(validadora == true) {
+        document.getElementById("form").submit()
+    }
+    console.log(nombre.value)
+})
+const validadora = () => {
+    if(imput.value.length > 5) {
+        return input.value
+    }
+}
 
 
 
