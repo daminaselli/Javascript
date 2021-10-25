@@ -15,10 +15,10 @@ let listaProductos = [];
 
 const agregarProductos = () => {
     const producto = new Productos ({
-        nombre : $("nombre").value,
-        email : $("email").value,
-        telefono : $("telefono").value,
-        producto : $("producto").value,
+        nombre : $("#nombre").value,
+        email : $("#email").value,
+        telefono : $("#telefono").value,
+        producto : $("#producto").value,
     })
     return producto
 }
@@ -47,7 +47,7 @@ const verificarLista = () => {
 
 const verDatos = () => {
     verificarLista().forEach(obj => {
-        $("tabla").innerHTML += `
+        $("#tabla").innerHTML += `
         <tr>
             <td>${obj.nombre}</td>
             <td>${obj.email}</td>
@@ -58,7 +58,7 @@ const verDatos = () => {
     });
 }
 
-document.getElementById("btn").addEventListener("click", (e) => {
+$("#btn").on("click", (e) => {
     e.preventDefault
     guardarBaseDatos()
 })
