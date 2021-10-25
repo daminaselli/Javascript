@@ -15,10 +15,10 @@ let listaProductos = [];
 
 const agregarProductos = () => {
     const producto = new Productos ({
-        nombre : document.getElementById ("nombre").value,
-        email : document.getElementById ("email").value,
-        telefono : document.getElementById ("telefono").value,
-        producto : document.getElementById ("producto").value,
+        nombre : $("nombre").value,
+        email : $("email").value,
+        telefono : $("telefono").value,
+        producto : $("producto").value,
     })
     return producto
 }
@@ -47,7 +47,7 @@ const verificarLista = () => {
 
 const verDatos = () => {
     verificarLista().forEach(obj => {
-        document.getElementById("tabla").innerHTML += `
+        $("tabla").innerHTML += `
         <tr>
             <td>${obj.nombre}</td>
             <td>${obj.email}</td>
