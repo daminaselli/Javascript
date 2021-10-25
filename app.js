@@ -65,3 +65,7 @@ $("#btn").on("click", (e) => {
 if(localStorage.getItem("listaProductos") !=null ) {
     verDatos()
 }
+
+window.addEventListener("load", () => {
+    console.log('Imagen lista');
+});
