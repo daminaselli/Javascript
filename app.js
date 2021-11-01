@@ -71,6 +71,11 @@ window.addEventListener("load", () => {
 });
 
 $(".btn1").on("click", () => {
-    $(".nosotros").slideToggle(2000)
+    $(".nosotros").slideToggle(2000);
 })
 
+$(".logo").css("height","200px")
+$(".logo").css("width","200px")
+$(".logo").animate({
+    opacity: '0.5',
+})
