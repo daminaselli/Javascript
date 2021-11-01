@@ -69,3 +69,8 @@ if(localStorage.getItem("listaProductos") !=null ) {
 window.addEventListener("load", () => {
     console.log('Imagen lista');
 });
+
+$(".btn1").on("click", () => {
+    $(".nosotros").slideToggle(2000)
+})
+
