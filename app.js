@@ -79,3 +79,15 @@ $(".logo").css("width","200px")
 $(".logo").animate({
     opacity: '0.5',
 })
+
+const URLGET = "https://api.whatsapp.com/send?phone=+5492612534723"
+
+$("#btn").click(() => { 
+    $.post(URLGET, infoPost ,(respuesta, estado) => {
+        if(estado == "success"){
+            $("body").prepend(`<div>
+Guardado:${respuesta.nombre}
+</div>`);
+        }  
+    });
+});
